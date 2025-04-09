@@ -1,0 +1,369 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "donor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "DonationReceived",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "ngo",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdrawal",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ngo",
+						"type": "address"
+					}
+				],
+				"name": "addNGO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "approvedNGOs",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "donate",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "donations",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "donor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "donorData",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "donor",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalDonated",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "donationsCount",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getDonation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDonationsCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_donor",
+						"type": "address"
+					}
+				],
+				"name": "getDonorInfo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ngo",
+						"type": "address"
+					}
+				],
+				"name": "isNGOApproved",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "ngo",
+						"type": "address"
+					}
+				],
+				"name": "removeNGO",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalDonations",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/DonationVerifier.sol": "DonationVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/AccessControl.sol": {
+			"keccak256": "0x522851f3502c82986b8ee4753acd94ac1786901215fdcb112d3334e4679bfbb1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://311a3c0068170fdcfec504ca7bfe126cdde0800d0c2248c56121603eead4976c",
+				"dweb:/ipfs/QmWY8Fj3ETMWP7MrKiSpzKokznMYXvsob5aFrNEEcdkfTk"
+			]
+		},
+		"contracts/DonationVerifier.sol": {
+			"keccak256": "0x63bd5e82307f47f1e7fffe35090a807f7d04ef78bc6ce8300cf8c31c7e373880",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4c51d06a8b3e1001851ff5024e088e4222d7f241ee62cda07ab343d878452fb1",
+				"dweb:/ipfs/QmRPbDHmRFM9h6WMyD8WGP83yrQVn929oEz9tYa862FbDA"
+			]
+		},
+		"contracts/DonorRegistry.sol": {
+			"keccak256": "0x300213cecb023fbd967d59f5e821dc774cec0b792637107adf907e44e891a2b5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://82854a31f2cb55f43062310c98dc68a1b51e015e0cda1326dbbc5fabe2ac0ab8",
+				"dweb:/ipfs/QmejPwvrEtLrS4oxA9NssHL9F9KpWoaJh8Kh88qb2CcDXT"
+			]
+		},
+		"contracts/NGORegistry.sol": {
+			"keccak256": "0xa8ead44d30587da32561324c432f5ace17bdba05e09d47db7c36a19854de83df",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://af64663aa543192083fa2f33363212611a41826f1b3c68b4a5562190789dcf73",
+				"dweb:/ipfs/QmX8rXLd8oHUd4tSyUU6dVtD4Rf5VqS8tgdFXfhT9YuVBf"
+			]
+		},
+		"contracts/Utils.sol": {
+			"keccak256": "0xd3a8a0a33dff4c3c1cc89b8b793ad475de197e63e460a7f608ed61a74ce6e24f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7ee9f4968b3325a2c950e71b4bdf90cd1bfc33b612a21a1fe25e413b268469e2",
+				"dweb:/ipfs/QmbVGUn6Lbk5rh2RGBwVpYrNGgqd9YaVXcR11iqhUktfwg"
+			]
+		}
+	},
+	"version": 1
+}
